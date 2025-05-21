@@ -15,7 +15,7 @@ def get_kernel(kernel_size, k):
     Y_ = np.linspace(-sigma_3, sigma_3, kernel_size)
     x_, y_ = np.meshgrid(X_, Y_)
     gauss_1 = 1 / (2 * np.pi * sigma ** 2) * np.exp(- (x_ ** 2 + y_ ** 2) / (2 * sigma ** 2))
-    Z = gauss_1.sum() #计算归一化系数
+    Z = gauss_1.sum()
     gauss_2 = (1/Z)*gauss_1
     
     return gauss_2
